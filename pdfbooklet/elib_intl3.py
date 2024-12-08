@@ -441,7 +441,7 @@ def _install(domain, localedir, asglobal=False):
 
     # initialize Python's gettext interface
     gettext.bindtextdomain(domain, localedir)
-    gettext.bind_textdomain_codeset(domain, 'UTF-8')
+    # gettext.bind_textdomain_codeset(domain, 'UTF-8')
 
     if asglobal:
         gettext.textdomain(domain)

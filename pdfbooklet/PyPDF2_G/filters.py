@@ -46,7 +46,8 @@ try:
     import zlib
 
     def decompress(data):
-        return zlib.decompress(data)
+        zobj = zlib.decompressobj()
+        return zobj.decompress(data)
 
     def compress(data):
         return zlib.compress(data)

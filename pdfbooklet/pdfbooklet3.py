@@ -5,6 +5,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 
+# version 3.1.3a (meomeo zlib fix) : fixes a bug in zlib decompression (https://stackoverflow.com/questions/32367005/zlib-error-error-5-while-decompressing-data-incomplete-or-truncated-stream-in)
 # version 3.1.3 : fixes issues about most recently used directories
 # version 3.1.2 : bug fix : autoscale didn't work for a mix of portrait / landscape pages.
 # version 3.1.1 : workaround for a bug appeared in Ubuntu 19 (see the OnDraw function)
@@ -28,7 +29,7 @@ from __future__ import unicode_literals
 # https://stackoverflow.com/questions/45838863/gio-memoryinputstream-does-not-free-memory-when-closed
 # Fix bug for display of red rectangles when the output page is rotated 90° or 270°
 
-PB_version = "3.1.3a"
+PB_version = "3.1.3a (😼 meomeo zlib fix)"
 
 
 """
@@ -199,6 +200,7 @@ le paquet python-dev est aussi nécessaire (mais pip le trouve)
 import time, math, string, os, sys, re, shutil, site
 #print(sys.version)
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 try :
     import configparser     # Python 3
